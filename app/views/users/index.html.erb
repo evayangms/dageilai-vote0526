@@ -1,2 +1,18 @@
 <h2>User List</h2>
 <%= link_to 'Create User', new_user_path %>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Email</th>
+	</tr>
+
+	<% @users.each do |user| %>
+		<tr>
+			<td>Name: <%= user.name %></td>
+			<td>Age: <%= user.age %></td>
+			<td>Email: <%= user.email %></td>
+		</tr>
+	<% end %>
+</table>
